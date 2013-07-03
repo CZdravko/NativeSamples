@@ -1,6 +1,6 @@
 //----------------------------------------------------------------------------------
 // File:        native_globe/jni/GlobeApp.cpp
-// SDK Version: Android NVIDIA samples 4 
+// SDK Version: Android NVIDIA samples 4
 // Email:       tegradev@nvidia.com
 // Site:        http://developer.nvidia.com/
 //
@@ -1121,7 +1121,7 @@ bool GlobeApp::initLightShaders(void) {
 	m_ilightColorLoc = glGetUniformLocation(m_shprogLight, "lightColor");
 
 	//Uniforms that need to be set once
-	glUniform1i(glGetUniformLocation(m_shprogLight, "NDTex"), (GLint) 2);
+	glUniform1i(glGetUniformLocation(m_shprogLight, "NDTex"), (GLint) 3);
 
 	glUseProgram(0);
 
@@ -1141,7 +1141,7 @@ bool GlobeApp::renderLights(void) {
 	//	glBindTexture(GL_TEXTURE_2D, m_uivTextures[0]);
 //		glActiveTexture(GL_TEXTURE1);
 //		glBindTexture(GL_TEXTURE_2D, m_uivTextures[1]);
-	glActiveTexture(GL_TEXTURE2);
+	glActiveTexture(GL_TEXTURE3);
 	glBindTexture(GL_TEXTURE_2D, m_renderTexture);
 	//	glActiveTexture(GL_TEXTURE3);
 	//	glBindTexture(GL_TEXTURE_2D, m_uivTextures[3]);
@@ -1152,7 +1152,7 @@ bool GlobeApp::renderLights(void) {
 	//MODEL - VIEW Matrix
 	NvMultMatf(fmModelView, m_fmView, m_fmLightModel);
 
-	//6. DRAW GLOBE (in VBOs)
+	//6. DRAW LIGHT SHAPES (in VBOs)
 	glUseProgram(m_shprogLight);
 
 	glUniformMatrix4fv(m_iModelViewMatUnifLoc, (GLsizei) 1, GL_FALSE,
@@ -1163,24 +1163,8 @@ bool GlobeApp::renderLights(void) {
 	GLfloat *ptr = NULL;
 	glVertexAttribPointer(1U, VERTEX_POSITION_SIZE, GL_FLOAT, GL_FALSE,
 			sizeof(FullVertex), ptr);
-	ptr += VERTEX_POSITION_SIZE;
-//		glVertexAttribPointer(2U, VERTEX_NORMAL_SIZE, GL_FLOAT, GL_FALSE,
-//				sizeof(FullVertex), ptr);
-	ptr += VERTEX_NORMAL_SIZE;
-//		glVertexAttribPointer(3U, VERTEX_TANGENT_SIZE, GL_FLOAT, GL_FALSE,
-//				sizeof(FullVertex), ptr);
-	ptr += VERTEX_TANGENT_SIZE;
-//		glVertexAttribPointer(4U, VERTEX_BINORMAL_SIZE, GL_FLOAT, GL_FALSE,
-//				sizeof(FullVertex), ptr);
-	ptr += VERTEX_BINORMAL_SIZE;
-//		glVertexAttribPointer(5U, VERTEX_TEXCOORD_SIZE, GL_FLOAT, GL_FALSE,
-//				sizeof(FullVertex), ptr);
 	glDisableVertexAttribArray(0U);
 	glEnableVertexAttribArray(1U);
-//		glEnableVertexAttribArray(2U);
-//		glEnableVertexAttribArray(3U);
-//		glEnableVertexAttribArray(4U);
-//		glEnableVertexAttribArray(5U);
 
 	glDrawElements(GL_TRIANGLES, m_uiNumIndices, GL_UNSIGNED_SHORT,
 			(const GLvoid*) NULL);
@@ -1188,4 +1172,118 @@ bool GlobeApp::renderLights(void) {
 	glDisable(GL_BLEND);
 	return false;
 }
+
+bool GlobeApp::renderMaterial(void) {
+	GLfloat fmCurrModel[4][4], fmInvCurrModel[4][4];
+		GLfloat fmMVP[4][4];
+		GLfloat m_fvSunPosObj[3], m_fvEyePosObj[3];
+
+		//We use the same IBO for all VBOs, bind it once
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_uiIBO);
+
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, m_uivTextures[0]);
+		glActiveTexture(GL_TEXTURE1);
+		glBindTexture(GL_TEXTURE_2D, m_uivTextures[1]);
+		glActiveTexture(GL_TEXTURE2);
+		glBindTexture(GL_TEXTURE_2D, m_uivTextures[2]);
+		glActiveTexture(GL_TEXTURE3);
+		glBindTexture(GL_TEXTURE_2D, m_uivTextures[3]);
+		glActiveTexture(GL_TEXTURE0);
+
+		glEnable(GL_BLEND);
+
+		//2. MODEL MATRIX
+		//2.1. Create current model matrix (from stored matrix with translation)
+		NvMultRotYDegMatf(fmCurrModel, m_fmModel, m_fCurrRotAngle);
+		//2.1. Store inverted copy of current model matrix
+		NvBuildRotYDegMatf(fmInvCurrModel, -(m_fCurrRotAngle));
+		NvMultMatf(fmInvCurrModel, m_fmInvModel, fmInvCurrModel);
+
+		//3. MODEL-VIEW-PROJECTION MATRIX
+		NvMultMatf(fmMVP, m_fmViewProj, fmCurrModel);
+
+		//4. SUN POSITION (world space -> object space)
+		NvTransformPointf(m_fvSunPosObj, fmInvCurrModel, m_fvSunPos);
+
+		//5. EYE POSITION (world space -> object space)
+		NvTransformPointf(m_fvEyePosObj, fmInvCurrModel, m_fvCurrEyePos);
+
+		//6. DRAW GLOBE (in VBOs)
+		glUseProgram(m_uivGlobePrograms[m_uiCurrGlobeProgIdx]);
+
+		glUniformMatrix4fv(m_iMVPMatUnifLocGlobe[m_uiCurrGlobeProgIdx], (GLsizei) 1,
+				GL_FALSE, &(fmMVP[0][0]));
+		glUniform3fv(m_iSunPosObjUnifLocGlobe[m_uiCurrGlobeProgIdx], (GLsizei) 1,
+				m_fvSunPosObj);
+		glUniform3fv(m_iEyePosObjUnifLocGlobe[m_uiCurrGlobeProgIdx], (GLsizei) 1,
+				m_fvEyePosObj);
+		glUniform1f(m_iRadiusUnifLocGlobe[m_uiCurrGlobeProgIdx], m_fGlobeRadius);
+
+		if (m_uiCurrGlobeProgIdx < 4U) {
+			glBindBuffer(GL_ARRAY_BUFFER, m_uiGlobeVBO);
+
+			GLfloat *ptr = NULL;
+			glVertexAttribPointer(1U, VERTEX_POSITION_SIZE, GL_FLOAT, GL_FALSE,
+					sizeof(FullVertex), ptr);
+			ptr += VERTEX_POSITION_SIZE;
+			glVertexAttribPointer(2U, VERTEX_NORMAL_SIZE, GL_FLOAT, GL_FALSE,
+					sizeof(FullVertex), ptr);
+			ptr += VERTEX_NORMAL_SIZE;
+			glVertexAttribPointer(3U, VERTEX_TANGENT_SIZE, GL_FLOAT, GL_FALSE,
+					sizeof(FullVertex), ptr);
+			ptr += VERTEX_TANGENT_SIZE;
+			glVertexAttribPointer(4U, VERTEX_BINORMAL_SIZE, GL_FLOAT, GL_FALSE,
+					sizeof(FullVertex), ptr);
+			ptr += VERTEX_BINORMAL_SIZE;
+			glVertexAttribPointer(5U, VERTEX_TEXCOORD_SIZE, GL_FLOAT, GL_FALSE,
+					sizeof(FullVertex), ptr);
+			glDisableVertexAttribArray(0U);
+			glEnableVertexAttribArray(1U);
+			glEnableVertexAttribArray(2U);
+			glEnableVertexAttribArray(3U);
+			glEnableVertexAttribArray(4U);
+			glEnableVertexAttribArray(5U);
+		}
+
+		glDrawElements(GL_TRIANGLES, m_uiNumIndices, GL_UNSIGNED_SHORT,
+				(const GLvoid*) NULL);
+
+
+
+		glDisable(GL_BLEND);
+}
+
+bool GlobeApp::initMaterialShader(void) {
+
+	char ucBuffer[1024];
+
+		//Fill in the #defines to be included in the shader source code before
+		//what is in the text file
+		memset(ucBuffer, '\0', 1024);
+
+		m_shprogGeometry = nv_load_program("light", ucBuffer);
+
+		glBindAttribLocation(m_shprogLight, 1, "pos_attr");
+
+		glLinkProgram(m_shprogLight);
+
+		glUseProgram(m_shprogLight);
+
+		//Uniforms that need to be updated every frame
+		m_iLightModelViewMatUnifLoc = glGetUniformLocation(m_shprogLight,
+				"ModelViewMat");
+		m_iLightPosViewLoc = glGetUniformLocation(m_shprogLight, "LightPosView");
+		m_ilightColorLoc = glGetUniformLocation(m_shprogLight, "lightColor");
+
+		//Uniforms that need to be set once
+		glUniform1i(glGetUniformLocation(m_shprogLight, "NDTex"), (GLint) 3);
+
+		glUseProgram(0);
+
+		return true;
+
+}
+
+
 

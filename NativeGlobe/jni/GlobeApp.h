@@ -1,6 +1,6 @@
 //----------------------------------------------------------------------------------
 // File:        native_globe/jni/GlobeApp.h
-// SDK Version: Android NVIDIA samples 4 
+// SDK Version: Android NVIDIA samples 4
 // Email:       tegradev@nvidia.com
 // Site:        http://developer.nvidia.com/
 //
@@ -154,9 +154,11 @@ protected:
 	bool initGeometryShaders(void);
 	bool initLightShaders(void);
 	bool initLightGeometry(void);
+	bool initMaterialShader(void);
 	bool drawNormalDepth(void);
 	bool renderGeometry(void);
 	bool renderLights(void);
+	bool renderMaterial(void);
 
 public:
 	//Ctor/Dtor
