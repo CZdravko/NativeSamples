@@ -1262,22 +1262,23 @@ bool GlobeApp::initMaterialShader(void) {
 		//what is in the text file
 		memset(ucBuffer, '\0', 1024);
 
-		m_shprogGeometry = nv_load_program("light", ucBuffer);
+		m_shprogMaterial = nv_load_program("material", ucBuffer);
 
-		glBindAttribLocation(m_shprogLight, 1, "pos_attr");
+		glBindAttribLocation(m_shprogMaterial, 1, "pos_attr");
+		glBindAttribLocation(m_shprogMaterial, 2, "tex_attr");
 
-		glLinkProgram(m_shprogLight);
+		glLinkProgram(m_shprogMaterial);
 
-		glUseProgram(m_shprogLight);
+		glUseProgram(m_shprogMaterial);
 
 		//Uniforms that need to be updated every frame
-		m_iLightModelViewMatUnifLoc = glGetUniformLocation(m_shprogLight,
+		m_iLightModelViewMatUnifLoc = glGetUniformLocation(m_shprogMaterial,
 				"ModelViewMat");
-		m_iLightPosViewLoc = glGetUniformLocation(m_shprogLight, "LightPosView");
-		m_ilightColorLoc = glGetUniformLocation(m_shprogLight, "lightColor");
+		m_iLightPosViewLoc = glGetUniformLocation(m_shprogMaterial, "LightPosView");
+		m_ilightColorLoc = glGetUniformLocation(m_shprogMaterial, "lightColor");
 
 		//Uniforms that need to be set once
-		glUniform1i(glGetUniformLocation(m_shprogLight, "NDTex"), (GLint) 3);
+		glUniform1i(glGetUniformLocation(m_shprogMaterial, "NDTex"), (GLint) 3);
 
 		glUseProgram(0);
 
