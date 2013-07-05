@@ -360,13 +360,16 @@ libBullet_la_SOURCES := \
 LOCAL_SRC_FILES := $(wildcard *.cpp)
 LOCAL_SRC_FILES += $(wildcard *.c)
 LOCAL_SRC_FILES += \
-		$(libBullet_la_SOURCES) \
+		$(libBullet_la_SOURCES)
 
 
 LOCAL_ARM_MODE   := arm
 
 LOCAL_C_INCLUDES := D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/ \
 		$(LOCAL_PATH)/bullet #../../../libs/jni/
+		
+LOCAL_CFLAGS := $(LOCAL_C_INCLUDES:%=-I%) -O3 -DANDROID_NDK -DDISABLE_IMPORTGL
+		
 LOCAL_LDLIBS :=  -lstdc++ -lc -lm -llog -landroid -ldl -lGLESv2 -lEGL -lOpenSLES
 LOCAL_STATIC_LIBRARIES := nv_and_util nv_egl_util nv_bitfont nv_math nv_glesutil nv_hhdds nv_log nv_shader nv_file nv_thread
 
