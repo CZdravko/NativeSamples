@@ -1,6 +1,6 @@
-D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/local/armeabi-v7a/objs/nv_math/nv_matrix.o: \
- ../../../libs/jni/nv_math/nv_matrix.cpp \
- ../../../libs/jni/nv_math/nv_matrix.h \
+D:/git/NativeSamples/NativeGlobe//obj/local/armeabi-v7a/objs/nv_math/nv_matrix.o: \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_math/nv_matrix.cpp \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_math/nv_matrix.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
@@ -29,7 +29,7 @@ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/asm/page.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/assert.h
 
-../../../libs/jni/nv_math/nv_matrix.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_math/nv_matrix.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h:
 

@@ -1,7 +1,7 @@
-D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/local/armeabi-v7a/objs/nv_bitfont/nv_bitfont.o: \
- ../../../libs/jni/nv_bitfont/nv_bitfont.cpp \
- ../../../libs/jni/nv_bitfont/../nv_global.h \
- ../../../libs/jni/nv_bitfont/../nv_types.h \
+D:/git/NativeSamples/NativeGlobe//obj/local/armeabi-v7a/objs/nv_bitfont/nv_bitfont.o: \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/nv_bitfont.cpp \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/../nv_global.h \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/../nv_types.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
@@ -9,7 +9,7 @@ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/sys/_types.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/machine/_types.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h \
- ../../../libs/jni/nv_bitfont/../nv_shader/nv_shader.h \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/../nv_shader/nv_shader.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/jni.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/android/log.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/stdio.h \
@@ -32,10 +32,10 @@ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/strings.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/memory.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/android/asset_manager.h \
- ../../../libs/jni/nv_bitfont/../nv_hhdds/nv_hhdds.h \
- ../../../libs/jni/nv_bitfont/nv_bitfont.h \
- ../../../libs/jni/nv_bitfont/../nv_color.h \
- ../../../libs/jni/nv_bitfont/../nv_file/nv_file.h \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/../nv_hhdds/nv_hhdds.h \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/nv_bitfont.h \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/../nv_color.h \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/../nv_file/nv_file.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/math.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/limits.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/sys/limits.h \
@@ -45,9 +45,9 @@ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/sys/syslimits.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/asm/page.h
 
-../../../libs/jni/nv_bitfont/../nv_global.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/../nv_global.h:
 
-../../../libs/jni/nv_bitfont/../nv_types.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/../nv_types.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h:
 
@@ -63,7 +63,7 @@ D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/machine/_types.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2ext.h:
 
-../../../libs/jni/nv_bitfont/../nv_shader/nv_shader.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/../nv_shader/nv_shader.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/jni.h:
 
@@ -109,13 +109,13 @@ D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/memory.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/android/asset_manager.h:
 
-../../../libs/jni/nv_bitfont/../nv_hhdds/nv_hhdds.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/../nv_hhdds/nv_hhdds.h:
 
-../../../libs/jni/nv_bitfont/nv_bitfont.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/nv_bitfont.h:
 
-../../../libs/jni/nv_bitfont/../nv_color.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/../nv_color.h:
 
-../../../libs/jni/nv_bitfont/../nv_file/nv_file.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_bitfont/../nv_file/nv_file.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/math.h:
 

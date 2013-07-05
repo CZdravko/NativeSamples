@@ -1,6 +1,6 @@
-D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/local/armeabi-v7a/objs/native_globe/GlobeApp.o: \
- D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//jni/GlobeApp.cpp \
- D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//jni/GlobeApp.h \
+D:/git/NativeSamples/NativeGlobe//obj/local/armeabi-v7a/objs/native_globe/GlobeApp.o: \
+ D:/git/NativeSamples/NativeGlobe//jni/GlobeApp.cpp \
+ D:/git/NativeSamples/NativeGlobe//jni/GlobeApp.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
@@ -27,7 +27,7 @@ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/strings.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/memory.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/android/log.h \
- ../../../libs/jni/nv_math/nv_matrix.h \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_math/nv_matrix.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/math.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/limits.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/sys/limits.h \
@@ -37,15 +37,15 @@ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/sys/syslimits.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/asm/page.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/assert.h \
- ../../../libs/jni/nv_math/nv_quat.h \
- ../../../libs/jni/nv_shader/nv_shader.h \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_math/nv_quat.h \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_shader/nv_shader.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/jni.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/android/asset_manager.h \
- D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//jni/GlobeDefines.h \
- ../../../libs/jni/nv_debug.h \
- D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//jni/GlobeUtil.h
+ D:/git/NativeSamples/NativeGlobe//jni/GlobeDefines.h \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_debug.h \
+ D:/git/NativeSamples/NativeGlobe//jni/GlobeUtil.h
 
-D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//jni/GlobeApp.h:
+D:/git/NativeSamples/NativeGlobe//jni/GlobeApp.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h:
 
@@ -99,7 +99,7 @@ D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/memory.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/android/log.h:
 
-../../../libs/jni/nv_math/nv_matrix.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_math/nv_matrix.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/math.h:
 
@@ -119,16 +119,16 @@ D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/asm/page.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/assert.h:
 
-../../../libs/jni/nv_math/nv_quat.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_math/nv_quat.h:
 
-../../../libs/jni/nv_shader/nv_shader.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_shader/nv_shader.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/jni.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/android/asset_manager.h:
 
-D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//jni/GlobeDefines.h:
+D:/git/NativeSamples/NativeGlobe//jni/GlobeDefines.h:
 
-../../../libs/jni/nv_debug.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_debug.h:
 
-D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//jni/GlobeUtil.h:
+D:/git/NativeSamples/NativeGlobe//jni/GlobeUtil.h:

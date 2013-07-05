@@ -1,5 +1,5 @@
-D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/local/armeabi-v7a/objs/nv_and_util/nv_native_app_glue.o: \
- ../../../libs/jni/nv_and_util/nv_native_app_glue.c \
+D:/git/NativeSamples/NativeGlobe//obj/local/armeabi-v7a/objs/nv_and_util/nv_native_app_glue.o: \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_and_util/nv_native_app_glue.c \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/jni.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/errno.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
@@ -47,7 +47,7 @@ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/linux/resource.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/asm/resource.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/asm-generic/resource.h \
- ../../../libs/jni/nv_and_util/nv_native_app_glue.h \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_and_util/nv_native_app_glue.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/poll.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/linux/poll.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/asm/poll.h \
@@ -158,7 +158,7 @@ D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/asm/resource.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/asm-generic/resource.h:
 
-../../../libs/jni/nv_and_util/nv_native_app_glue.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_and_util/nv_native_app_glue.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/poll.h:
 

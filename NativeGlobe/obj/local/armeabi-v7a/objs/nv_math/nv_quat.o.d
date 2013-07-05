@@ -1,6 +1,6 @@
-D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/local/armeabi-v7a/objs/nv_math/nv_quat.o: \
- ../../../libs/jni/nv_math/nv_quat.cpp \
- ../../../libs/jni/nv_math/nv_quat.h \
+D:/git/NativeSamples/NativeGlobe//obj/local/armeabi-v7a/objs/nv_math/nv_quat.o: \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_math/nv_quat.cpp \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_math/nv_quat.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2platform.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/KHR/khrplatform.h \
@@ -35,7 +35,7 @@ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/strings.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/memory.h
 
-../../../libs/jni/nv_math/nv_quat.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_math/nv_quat.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/GLES2/gl2.h:
 

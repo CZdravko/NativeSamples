@@ -1,5 +1,5 @@
-D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/local/armeabi-v7a/objs/nv_file/nv_apk_file.o: \
- ../../../libs/jni/nv_file/nv_apk_file.c \
+D:/git/NativeSamples/NativeGlobe//obj/local/armeabi-v7a/objs/nv_file/nv_apk_file.o: \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_file/nv_apk_file.c \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/math.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -38,7 +38,7 @@ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/android/asset_manager.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/android/log.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/stdio.h \
- ../../../libs/jni/nv_file/nv_apk_file.h
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_file/nv_apk_file.h
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/math.h:
 
@@ -116,4 +116,4 @@ D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/android/log.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/stdio.h:
 
-../../../libs/jni/nv_file/nv_apk_file.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_file/nv_apk_file.h:

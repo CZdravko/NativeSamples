@@ -1,7 +1,7 @@
-D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/local/armeabi-v7a/objs/nv_thread/nv_thread.o: \
- ../../../libs/jni/nv_thread/nv_thread.c \
+D:/git/NativeSamples/NativeGlobe//obj/local/armeabi-v7a/objs/nv_thread/nv_thread.o: \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_thread/nv_thread.c \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/jni.h \
- ../../../libs/jni/nv_thread/nv_thread.h \
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_thread/nv_thread.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/pthread.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/time.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
@@ -42,11 +42,11 @@ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/sample_apps/native_globe//obj/
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/strings.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/memory.h \
  D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/android/log.h \
- ../../../libs/jni/nv_thread/../nv_debug.h
+ D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_thread/../nv_debug.h
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/jni.h:
 
-../../../libs/jni/nv_thread/nv_thread.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_thread/nv_thread.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/pthread.h:
 
@@ -128,4 +128,4 @@ D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/memory.h:
 
 D:/android-ndk-r8e/platforms/android-9/arch-arm/usr/include/android/log.h:
 
-../../../libs/jni/nv_thread/../nv_debug.h:
+D:/NVSAMPLES/nvidia_tegra_android_samples_preview/libs/jni/nv_thread/../nv_debug.h:
